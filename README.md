@@ -1,3 +1,16 @@
+# Software Crafting Chronicles
+This is an attempt to create a fully responsive blog with minimalistic (and hopefully stylish) design using NextJS. It's still a work in progress but I hope it can host all my technical ideas and thoughts in the future. Here a sneak peek of how it looks like: 
+
+
+<img width="2552" alt="Screenshot 2024-05-14 at 11 12 47" src="https://github.com/cekocvetkov/software-crafting-chronicles/assets/7689051/521596eb-c028-4377-a9b8-594a304885bb">
+<img width="1000" alt="Screenshot 2024-05-14 at 11 16 01" src="https://github.com/cekocvetkov/software-crafting-chronicles/assets/7689051/fa3806f1-e015-4719-839b-71a6d2c03dd5">
+
+#### And mobile, of course:
+
+<img width="371" alt="Screenshot 2024-05-14 at 11 14 37" src="https://github.com/cekocvetkov/software-crafting-chronicles/assets/7689051/ae4fdfde-390a-4688-980b-a6417bdae72e">
+
+# NextJS Specific Documentation
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
