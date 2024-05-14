@@ -4,14 +4,12 @@ import "@/styles/mdx.css";
 import { notFound } from "next/navigation";
 import styles from "./PostPage.module.css";
 import ResetHeader from "./resetHeader";
-import { slug } from "github-slugger";
 
-//TODO: DO THIS!
-// export const generateStaticParams = () => {
-//   const tags = posts;
-//   const paths = Object.keys(tags).map((slug) => ({ slug: slug(slug) }));
-//   return paths;
-// };
+export async function generateStaticParams() {
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
 function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);

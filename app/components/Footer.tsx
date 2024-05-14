@@ -12,7 +12,6 @@ function Footer() {
       if (!elementClassName) {
         return;
       }
-      console.log(isMobile);
       const isPostBody: boolean = isMobile && (elementClassName.startsWith("PostPage") || elementClassName.includes("about-me-page"));
       if (isPostBody) {
         const postBody = document.querySelector("#post-body")!;
@@ -29,13 +28,11 @@ function Footer() {
         setPrevScrollpos(currentScrollPos);
       }
     };
-    console.log(window.innerWidth);
     if (window.innerWidth < 900) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
-    console.log("!! " + isMobile);
     document.addEventListener("scroll", handleScroll, {
       passive: true,
       capture: true,

@@ -3,7 +3,6 @@ import { other } from "#site/content";
 import styles from "./page.module.css";
 import MDXComponent from "../components/mdx/MDXComponent";
 import ResetHeader from "../post/[slug]/resetHeader";
-import { SourceTextModule } from "vm";
 
 function AboutMe() {
   const aboutMePage = other.find((p) => p.slug == "about-me");

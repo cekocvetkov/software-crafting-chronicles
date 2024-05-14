@@ -23,7 +23,6 @@ function Header() {
         const header = document.querySelector("#header")!;
         const postBody = document.querySelector("#post-body")!;
         const currentScrollPos = postBody.scrollTop;
-        console.log(`${prevScrollpos} x ${currentScrollPos}`);
 
         if (0 >= currentScrollPos) {
           header.classList.remove("hide");
