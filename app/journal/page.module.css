@@ -1,0 +1,8 @@
+.journalWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: center;
+  margin: 4rem 5rem 1rem 5rem;
+}

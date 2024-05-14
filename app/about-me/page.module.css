@@ -1,0 +1,52 @@
+.about-me {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: 0 5rem 1rem 5rem;
+}
+
+.text {
+  display: flex;
+  margin: 0 2rem 0 2rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0 2rem 0;
+  }
+
+  .text {
+    margin-top: 2rem;
+  }
+}
+
+.postBody {
+  overflow: auto;
+  margin: 0 5rem 1rem 5rem;
+  transition: 1s;
+}
+@media only screen and (max-width: 1110px) {
+  .postBody {
+    margin: 2rem 2rem 2rem 2rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .postBody {
+    margin: 0;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.postBody::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.postBody {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

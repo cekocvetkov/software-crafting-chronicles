@@ -1,0 +1,87 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  /* position: absolute;
+  top: 0; */
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 151px;
+  width: 180px;
+  padding-bottom: 0.3rem;
+  transition: background-color 0.6s ease;
+}
+
+.post:hover {
+  background-color: var(--accent-color) !important;
+}
+
+.active {
+  background-color: var(--accent-color) !important;
+  border: 1px solid var(--primary-text-color);
+  border-width: thin;
+}
+
+.postText {
+  font-size: 0.97rem;
+  margin: 0 0.4rem 0.6rem 0.4rem;
+  display: flex;
+
+  /* Cut off text when too long */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+
+.postDate {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.78rem;
+  margin-right: 0.4rem;
+}
+
+/* Medium */
+@media only screen and (max-width: 1300px) {
+  .post {
+    width: 150px;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 900px) {
+  .posts {
+    flex-direction: row;
+  }
+
+  .post {
+    height: 150px;
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .post {
+    height: 120px;
+    min-width: 150px;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.posts::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.posts {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

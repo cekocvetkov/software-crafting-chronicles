@@ -1,0 +1,55 @@
+.flare {
+  position: fixed;
+  border: 2px solid var(--border-color);
+  /* border-radius: 50%; */
+  mix-blend-mode: screen;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 999999 !important;
+  backdrop-filter: blur(1px);
+  background-color: #0000005e;
+  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  cursor: none !important;
+}
+
+.flareScroll {
+  /* width: 25px !important;
+  height: 40px !important; */
+  /* border-radius: 60px !important; */
+}
+
+.flareScroll::before {
+  content: "";
+  width: 2px !important;
+  height: 5px;
+  position: absolute;
+  background: var(--secondary-text-color) !important;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 70%;
+  opacity: 1;
+  animation: flareScroll 2s infinite;
+}
+
+@media screen and (max-width: 900px) {
+  .flare {
+    display: none;
+    width: 0;
+    height: 0;
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
+}
+
+@keyframes flareScroll {
+  from {
+    opacity: 1;
+    top: 2px;
+  }
+
+  to {
+    opacity: 0;
+    top: 10px;
+  }
+}

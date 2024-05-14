@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin: 6rem 5rem 2rem 5rem;
+  transition: 0.7s; /* Transition effect when sliding down (and up) */
+
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+
+.navItemActive {
+  color: var(--secondary-text-color);
+}
+
+.navItem:hover {
+  color: var(--secondary-text-color);
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 900px) {
+	.header {
+		margin: 2em 1rem 3rem 1rem;
+	}
+}
+@media only screen and (max-width: 450px) {
+	.header {
+		margin: 1rem 1rem 1rem 1rem;
+	}
+}
