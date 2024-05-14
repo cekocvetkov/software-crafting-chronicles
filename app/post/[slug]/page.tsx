@@ -7,11 +7,11 @@ import ResetHeader from "./resetHeader";
 import { slug } from "github-slugger";
 
 //TODO: DO THIS!
-export const generateStaticParams = () => {
-  const tags = posts;
-  const paths = Object.keys(tags).map((slug) => ({ slug: slug(slug) }));
-  return paths;
-};
+// export const generateStaticParams = () => {
+//   const tags = posts;
+//   const paths = Object.keys(tags).map((slug) => ({ slug: slug(slug) }));
+//   return paths;
+// };
 
 function getPost(slug: string) {
   return posts.find((p) => p.slug === slug);
