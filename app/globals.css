@@ -4,7 +4,7 @@
   --primary-text-color: #faf9f6;
   --secondary-text-color: #e58c4c;
   --border-color: rgb(182, 109, 56, 0.5);
-  --transition-duration: 0.5s;
+  --transition-duration: 0.2s;
 }
 
 * {
@@ -103,6 +103,7 @@ body {
 }
 
 .hide-header {
+  -webkit-transform: translateY(-12);
   transform: translateY(-12rem);
 }
 .show-header {
@@ -110,6 +111,7 @@ body {
 }
 
 .hide-posts {
+  -webkit-transform: translateY(200%);
   transform: translateY(200%);
 }
 /* .move {
