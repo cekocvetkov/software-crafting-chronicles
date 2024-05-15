@@ -21,6 +21,7 @@ a {
 
 html,
 body {
+  margin: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +37,7 @@ body {
 
 .wrapper-wrapper {
   width: 100%;
-  height: 90vh;
+  height: 90dvh;
   display: flex;
   justify-content: center;
 }
@@ -53,13 +54,21 @@ body {
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
   flex-basis: 90%;
-  overflow: hidden;
-  transition: var(--transition-duration);
+  overflow: auto;
+  margin: 1rem 0 1rem 0;
+  /* transition: var(--transition-duration); */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content::-webkit-scrollbar {
+  display: none;
 }
 
+/* Hide scrollbar for IE, Edge and Firefox */
+.content {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .second-column-wrapper {
   display: flex;
   flex-basis: 30%;
@@ -76,7 +85,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 10vh;
+  height: 10dvh;
 }
 .footer {
   display: flex;
@@ -93,19 +102,22 @@ body {
   }
 }
 
-.hide {
+.hide-header {
   transform: translateY(-12rem);
+}
+.show-header {
+  background-image: radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .hide-posts {
   transform: translateY(200%);
 }
-.move {
+/* .move {
   transform: translateY(-20%);
   margin-top: -3rem !important;
   margin-bottom: -5rem !important;
-  /* position: absolute; */
-}
+  position: absolute;
+} */
 
 /* Middle */
 @media only screen and (max-width: 1300px) {
@@ -124,20 +136,36 @@ body {
 /* Mobile */
 @media only screen and (max-width: 900px) {
   .wrapper-wrapper {
-    height: 100vh !important;
+    height: 100dvh !important;
+  }
+  .second-column-wrapper {
+    position: sticky;
+    bottom: 0;
   }
   .content {
     margin: 3em 2rem 4rem 2rem;
     flex-basis: 140% !important;
+    overflow: visible !important;
   }
 
   .content-wrapper {
     border: none;
     margin: 0;
     flex-direction: column;
-    max-height: 98vh;
+    max-height: 100dvh;
+    display: flex;
+    overflow: auto;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .content-wrapper::-webkit-scrollbar {
+    display: none;
   }
 
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .content-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
   .footer-wrapper {
     display: none;
     visibility: hidden;

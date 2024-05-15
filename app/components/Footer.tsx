@@ -13,21 +13,30 @@ function Footer() {
       if (!elementClassName) {
         return;
       }
-      const isPostBody: boolean = isMobile && (elementClassName.startsWith("PostPage") || elementClassName.includes("about-me-page"));
+      const isPostBody: boolean = isMobile && (elementClassName.startsWith("content-wrapper") || elementClassName.includes("about-me-page"));
       if (isPostBody) {
         const postBody = document.querySelector("#post-body")!;
-        const content = document.querySelector("#content")!;
+        const content = document.querySelector(".content-wrapper")!;
         const secondColumn = document.querySelector("#second-column")!;
-        const currentScrollPos = postBody.scrollTop;
-        console.log(`${prevScrollpos} x ${currentScrollPos}`);
+        const currentScrollPos = content.scrollTop;
+        // console.log("!!!!");
+        // console.log(`${prevScrollpos} x ${currentScrollPos}`);
 
-        if (prevScrollpos >= currentScrollPos) {
-          content.classList.remove("moveMobile");
+        if (currentScrollPos <= 0) {
           secondColumn.classList.remove("hide-posts");
-        } else {
-          content.classList.add("moveMobile");
-          secondColumn.classList.add("hide-posts");
+          secondColumn.classList.remove("show-header");
+          // postBody.classList.remove("move");
         }
+        if (currentScrollPos > prevScrollpos && !secondColumn.classList.contains("hide-posts")) {
+          secondColumn.classList.remove("show-header");
+          secondColumn.classList.add("hide-posts");
+          // postBody.classList.add("move");
+        }
+        if (currentScrollPos < prevScrollpos && secondColumn.classList.contains("hide-posts")) {
+          secondColumn.classList.remove("hide-posts");
+          secondColumn.classList.add("show-header");
+        }
+
         setPrevScrollpos(currentScrollPos);
       }
     };

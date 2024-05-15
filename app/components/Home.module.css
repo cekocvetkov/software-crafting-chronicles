@@ -2,9 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100%;
   justify-content: center;
-  margin: 6rem 5rem 1rem 5rem;
+  margin: 12rem 5rem 1rem 5rem;
 }
 
 .title {
@@ -19,12 +18,13 @@
 }
 
 @media only screen and (max-width: 1110px) {
-	.home {
-		margin: 2rem 2rem 2rem 2rem;
-	}
+  .home {
+    margin: 2rem 2rem 2rem 2rem;
+  }
 }
 @media only screen and (max-width: 900px) {
   .home {
     margin: 0;
+    height: 100%;
   }
 }
