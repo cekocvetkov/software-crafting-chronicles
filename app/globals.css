@@ -21,6 +21,7 @@ a {
 
 html,
 body {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -29,6 +30,8 @@ body {
   font-weight: light !important;
   overflow: hidden;
   cursor: none;
+  -webkit-animation-timing-function: linear; /* Chrome, Safari, Opera */
+  animation-timing-function: linear;
 }
 
 .wrapper-wrapper {
@@ -91,8 +94,7 @@ body {
 }
 
 .hide {
-  transform: translateY(-300%);
-  /* visibility: hidden; */
+  transform: translateY(-12rem);
 }
 
 .hide-posts {

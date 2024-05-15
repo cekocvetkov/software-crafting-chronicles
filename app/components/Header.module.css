@@ -3,7 +3,7 @@
   justify-content: space-between;
   font-size: 1.1rem;
   margin: 6rem 5rem 2rem 5rem;
-  transition: var(--transition-duration); /* Transition effect when sliding down (and up) */
+  transition: all var(--transition-duration) ease-in-out; /* Transition effect when sliding down (and up) */
 }
 
 .nav {

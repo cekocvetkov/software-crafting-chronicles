@@ -7,7 +7,6 @@
   margin: 4rem 5rem 1rem 5rem;
 }
 .input {
-  width: 80%;
   outline: 0;
   background-color: transparent;
   color: var(--primary-text-color);
@@ -28,11 +27,4 @@
 .input::-ms-input-placeholder {
   /* Edge 12 -18 */
   color: var(--secondary-text-color);
-}
-.button {
-  width: 80%;
-  margin-top: 0.5rem;
-  font-size: x-large;
-  color: var(--secondary-text-color);
-  text-align: right;
 }

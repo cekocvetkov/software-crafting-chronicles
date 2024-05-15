@@ -19,6 +19,8 @@ function Footer() {
         const content = document.querySelector("#content")!;
         const secondColumn = document.querySelector("#second-column")!;
         const currentScrollPos = postBody.scrollTop;
+        console.log(`${prevScrollpos} x ${currentScrollPos}`);
+
         if (prevScrollpos >= currentScrollPos) {
           content.classList.remove("moveMobile");
           secondColumn.classList.remove("hide-posts");

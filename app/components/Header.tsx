@@ -23,11 +23,11 @@ function Header() {
         const header = document.querySelector("#header")!;
         const postBody = document.querySelector("#post-body")!;
         const currentScrollPos = postBody.scrollTop;
-
-        if (0 >= currentScrollPos) {
+        if (prevScrollpos >= currentScrollPos) {
           header.classList.remove("hide");
           postBody.classList.remove("move");
-        } else {
+        }
+        if (currentScrollPos > prevScrollpos && !header.classList.contains("hide")) {
           header.classList.add("hide");
           postBody.classList.add("move");
         }
