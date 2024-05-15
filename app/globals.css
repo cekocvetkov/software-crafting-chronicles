@@ -21,7 +21,8 @@ a {
 
 html,
 body {
-  overscroll-behavior: contain;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on iOS */
 
   margin: 0;
   scroll-behavior: smooth;
