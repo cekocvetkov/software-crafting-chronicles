@@ -21,6 +21,8 @@ a {
 
 html,
 body {
+  overscroll-behavior: contain;
+
   margin: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
