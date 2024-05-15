@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { IoLogoGithub } from "react-icons/io5";
 import * as runtime from "react/jsx-runtime";
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -7,6 +9,8 @@ const useMDXComponent = (code: string) => {
 
 const components = {
   Image,
+  Link,
+  IoLogoGithub,
 };
 
 interface MdxProps {

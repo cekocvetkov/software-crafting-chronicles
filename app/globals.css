@@ -4,6 +4,7 @@
   --primary-text-color: #faf9f6;
   --secondary-text-color: #e58c4c;
   --border-color: rgb(182, 109, 56, 0.5);
+  --transition-duration: 0.5s;
 }
 
 * {
@@ -53,13 +54,16 @@ body {
   flex-direction: column;
   flex-basis: 90%;
   overflow: hidden;
-  transition: 0.7s;
+  transition: var(--transition-duration);
 }
 
 .second-column-wrapper {
   display: flex;
   flex-basis: 30%;
-  transition: 0.7s; /* Transition effect when sliding down (and up) */
+  transition: var(--transition-duration); /* Transition effect when sliding down (and up) */
+}
+#posts-list {
+  background-color: var(--border-color);
 }
 .third-space {
   display: flex;
@@ -143,7 +147,7 @@ body {
   }
   .moveMobile {
     margin-bottom: -50% !important;
-    transition: 0.7s;
+    transition: var(--transition-duration);
   }
 }
 

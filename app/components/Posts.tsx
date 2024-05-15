@@ -1,4 +1,5 @@
 import { Post, posts } from "#site/content";
+import { useSearchParams } from "next/navigation";
 import { colorScheme, isColorTooSimilar } from "../utils/color-utils";
 import { sortByDate } from "../utils/date-utils";
 import PostItem from "./PostItem";
@@ -7,7 +8,13 @@ import styles from "./Posts.module.css";
 let previousColor = "";
 
 function Posts({ pathName }: { pathName: string }) {
-  const sortedPosts = sortByDate(posts).filter((p) => pathName !== `/post/${p.slug}`);
+  const searchParams = useSearchParams();
+  const searchString = searchParams.get("search");
+  let searchStringFiltered = posts;
+  if (searchString) {
+    searchStringFiltered = posts.filter((p) => p.title.toLowerCase().indexOf(searchString.toLocaleLowerCase()) >= 0);
+  }
+  const sortedPosts = sortByDate(searchStringFiltered).filter((p) => pathName !== `/post/${p.slug}`);
   const highlighted = posts.filter((p) => pathName === `/post/${p.slug}`);
   const displayPosts: Post[] = sortedPosts.filter((p) => p.published);
   if (highlighted && highlighted.length > 0) {

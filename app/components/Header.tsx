@@ -53,7 +53,7 @@ function Header() {
           about me
         </Link>
         <Link href="/journal" className={isActive("/journal") ? styles.navItemActive : styles.navItem}>
-          journal
+          search
         </Link>
       </div>
     </div>
