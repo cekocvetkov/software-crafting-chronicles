@@ -59,6 +59,7 @@
     flex-direction: row;
     overflow-y: hidden;
     min-width: 100%;
+    min-height: 151px;
   }
 
   .post {

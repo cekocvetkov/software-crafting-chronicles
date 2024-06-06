@@ -178,6 +178,16 @@ video {
   justify-content: center;
   margin: 12rem 5rem 1rem 5rem;
 }
+@media only screen and (max-height: 550px) {
+  .journap-wrapper {
+    margin-top: 8rem;
+  }
+}
+@media only screen and (max-height: 450px) {
+  .journap-wrapper {
+    margin-top: 4rem;
+  }
+}
 .input {
   width: 80%;
   outline: 0;

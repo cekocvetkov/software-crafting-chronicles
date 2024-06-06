@@ -16,6 +16,7 @@ const useScrollDirection = () => {
     console.log("Setting up scroll listener...");
     const handleScroll = () => {
       console.log(lastScrollTopRef.current);
+      console.log(`isMobile: ${isMobile.current}`);
       const contentBody = document.querySelector("#content")!;
       const header = document.querySelector("#header")!;
       const secondColumn = document.querySelector("#second-column")!;
@@ -26,7 +27,7 @@ const useScrollDirection = () => {
 
         header.classList.remove("hide-header");
         header.classList.remove("show-header");
-        contentBody.scrollTo({ left: 0, top: 0, behavior: "instant" });
+        // contentBody.scrollTo({ left: 0, top: 0, behavior: "smooth" });
         if (isMobile.current) {
           contentBody.classList.remove("move-body");
           secondColumn.classList.remove("hide-posts");
