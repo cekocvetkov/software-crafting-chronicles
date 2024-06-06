@@ -1,6 +1,5 @@
 "use client";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import styles from "./page.module.css";
 import React, { ChangeEvent } from "react";
 
 function Journal() {
@@ -15,9 +14,9 @@ function Journal() {
   }
 
   return (
-    <div className={styles.journalWrapper}>
-      <div className={styles.input}>
-        <input className={styles.input} autoFocus={true} value={searchParamsValue!} type="text" placeholder="search" onChange={handleSearch} />
+    <div className="journap-wrapper">
+      <div className="input">
+        <input className="input" autoFocus={true} value={searchParamsValue!} type="text" placeholder="search" onChange={handleSearch} />
       </div>
     </div>
   );
