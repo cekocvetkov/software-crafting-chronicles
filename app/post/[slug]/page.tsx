@@ -1,7 +1,6 @@
 import { posts } from "#site/content";
 import "@/styles/mdx.css";
 import { notFound } from "next/navigation";
-import styles from "./PostPage.module.css";
 import ResetHeader from "./resetHeader";
 import MDXComponent from "@/app/components/mdx/MDXComponent";
 
@@ -20,9 +19,9 @@ function Post({ params: { slug } }: { params: { slug: string } }) {
     notFound();
   }
   return (
-    <div id="post-body" className={styles.postBody}>
+    <div id="post-body" className="post-body">
       <ResetHeader></ResetHeader>
-      <div className={styles.n}>
+      <div>
         <MDXComponent code={post!.code}></MDXComponent>
       </div>
     </div>
