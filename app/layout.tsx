@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
 import PostsWrapper from "./postsWrapper";
-import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Software crafting chronicles",
@@ -25,6 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <script>0</script>
+
         <Cursor></Cursor>
         {/* <ScrollHandler></ScrollHandler> */}
         <div className="wrapper-wrapper">

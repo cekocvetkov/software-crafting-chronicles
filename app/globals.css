@@ -167,6 +167,26 @@ video {
     font-size: 14px !important;
   }
 }
+.helm-icon {
+  background-color: whitesmoke !important;
+}
+.technologies p {
+  margin: 0;
+  margin-bottom: 0.2rem !important;
+}
+.about-image {
+  display: flex !important;
+  flex-direction: column !important;
+  float: left !important;
+}
+.about-rectangle {
+  margin-top: 1rem;
+  height: 12px;
+  width: 164px;
+  background-color: transparent;
+  border: 1px var(--border-color) solid;
+}
+
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
 /* Trying to fix FOUC */
