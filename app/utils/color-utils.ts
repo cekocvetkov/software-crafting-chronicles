@@ -3,8 +3,9 @@ interface RGB {
   g: number;
   b: number;
 }
-export const colorScheme = ["#8C684E", "#E58C4C", "#8E562C", "#CC8F63", "#D49F78"]; // Example colors
-// export const colorScheme = ["#6B240C", "#994D1C", "#E48F45", "#CC8F63", "#D49F78"]; // Example colors
+
+// export const colorScheme = ["#8C684E", "#E58C4C", "#8E562C", "#CC8F63", "#D49F78"]; // Example colors
+export const colorScheme = ["#784F35", "#E58C4C", "#A75000", "#E58C4C", "#E58C4C"]; // Example colors
 
 export function isColorTooSimilar(color1: string, color2: string) {
   if (!color1 || !color2) return false;

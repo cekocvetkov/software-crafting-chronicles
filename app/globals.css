@@ -142,6 +142,11 @@ video {
   }
 }
 
+@media only screen and (max-height: 970px) {
+  .aboutMeHeader {
+    margin-top: 2rem !important;
+  }
+}
 @media only screen and (max-width: 900px) {
   .aboutMeHeader {
     margin-top: 0 !important;

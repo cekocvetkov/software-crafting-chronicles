@@ -5,9 +5,9 @@ date: "2024-03-02"
 ---
 
 <div>
-<Image alt="Image of author" src="/images/me.jfif" class="aboutMeImage" width={0} height={0} sizes="100vw" style={{ float: "left", margin: "0 2rem 0.5rem 0", width: "280px", height: "300px", objectFit: "cover",marginTop: "0.3rem" }} />
+<Image placeholder="blur" blurDataURL="/images/me.png" alt="Image of author" src={"/images/me.png"} className="aboutMeImage" width={0} height={0} sizes="100vw" style={{ float: "left", margin: "0 2rem 0.5rem 0", width: "280px", height: "300px", objectFit: "cover",marginTop: "0.3rem", border: "2px var(--border-color) solid" }} />
 
-<div class="aboutMeHeader" style={{ fontSize: "20px", marginTop: "5rem", textWrap: "balance" }}>
+<div className="aboutMeHeader" style={{ fontSize: "20px", marginTop: "4rem", textWrap: "balance" }}>
   **Passionate software developer** <br /> **Based in Vienna**
 </div>
 
@@ -18,7 +18,7 @@ As a creative who values simplicity, I've designed my blog to be like a business
 
 If you're curious about my work or want to explore some coding together, feel free to check out my <Link aria-label="Link to my Github handle" href="https://github.com/cekocvetkov">**Github Page**</Link>. I'd love to learn from others and contribute to projects that make a positive impact.
 
-<div class="aboutMeBio" style={{display: "flex", justifyContent: "flex-start", alignItems: "center", columnGap: "4rem"}}>
+<div className="aboutMeBio" style={{display: "flex", justifyContent: "flex-start", alignItems: "center", columnGap: "4rem"}}>
 <div>
 **Name**: Tsvetan Tsvetkov
 

@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import useScrollDirection from "../hooks/UseScrollDirection";
 import ScrollToTop from "./ScrollToTop";
-
 function Header() {
   const pathName = usePathname();
   useScrollDirection();
@@ -16,7 +15,6 @@ function Header() {
   return (
     <>
       <ScrollToTop></ScrollToTop>
-
       <div id="header" className={styles.header}>
         <Link href="/" scroll={false} className={styles.navItem}>
           tsv

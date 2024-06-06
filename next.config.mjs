@@ -4,7 +4,6 @@ import { build } from "velite";
 export default {
   // othor next config here...
   reactStrictMode: false,
-
   webpack: (config) => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;

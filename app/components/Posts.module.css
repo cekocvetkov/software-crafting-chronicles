@@ -4,6 +4,8 @@
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on iOS */
   overflow: auto;
+  background-color: #bd7f52;
+  min-width: 180px;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .posts::-webkit-scrollbar {
@@ -56,6 +58,7 @@
   .posts {
     flex-direction: row;
     overflow-y: hidden;
+    min-width: 100%;
   }
 
   .post {
