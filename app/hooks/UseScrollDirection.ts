@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import useMobile from "./IsMobile";
-
+const scrollEffectsThresholdInPx = 300;
 const useScrollDirection = () => {
   const isMobile = useMobile();
   const [scrollDirection, setScrollDirection] = useState("top");
@@ -22,6 +22,12 @@ const useScrollDirection = () => {
       const secondColumn = document.querySelector("#second-column")!;
 
       const currentScrollTop = contentBody.scrollTop;
+
+      // Skip scroll animations effects if it's just for a little space
+      if (isMobile.current && Math.abs(contentBody.scrollHeight - window.outerHeight) < 200) {
+        return;
+      }
+
       if (currentScrollTop <= 0) {
         setScrollDirection("top");
 
@@ -53,7 +59,6 @@ const useScrollDirection = () => {
         }
       }
       if (isMobile.current) {
-        console.log("ja");
         if (currentScrollTop + window.outerHeight >= contentBody.scrollHeight) {
           lastScrollTopRef.current = contentBody.scrollHeight;
         } else {
