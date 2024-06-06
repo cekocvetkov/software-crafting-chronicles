@@ -13,12 +13,7 @@ interface PostItemProps {
 
 function PostItem({ slug, title, date, color, active }: PostItemProps) {
   return (
-    <Link
-      key={1}
-      href={`/post/${slug}`}
-      className={`${styles.post} ${active ? styles.active : ""}`}
-      style={{ backgroundColor: color }}
-    >
+    <Link key={1} href={`/post/${slug}`} className={`${styles.post} ${active ? styles.active : ""}`} style={{ backgroundColor: color }}>
       <div className={styles.postText}>{title}</div>
       <div className={styles.postDate}>{formatDate(date)}</div>
     </Link>

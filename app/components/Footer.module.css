@@ -1,0 +1,19 @@
+.footerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.contactIcons {
+  display: flex;
+}
+.contactIcons a {
+  margin: 0 0.4rem 0 0.4rem;
+}

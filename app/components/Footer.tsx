@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import styles from "./Footer.module.css";
 
 function Footer() {
   return (
-    <footer id="footer" className="footer-wrapper">
-      <div className="contact-icons">
+    <footer id="footer" className={styles.footerWrapper}>
+      <div className={styles.contactIcons}>
         <Link aria-label="LinkedIn Link" href="https://linkedin.com/in/tsvetkov-tsvetan">
           <IoLogoLinkedin size={24} />
         </Link>
@@ -14,7 +14,7 @@ function Footer() {
           <IoLogoGithub size={24}></IoLogoGithub>
         </Link>
       </div>
-      <div className="footer">Copyright © 2024 Tsvetan Tsvetkov </div>
+      <div className={styles.footer}>Copyright © 2024 Tsvetan Tsvetkov </div>
     </footer>
   );
 }

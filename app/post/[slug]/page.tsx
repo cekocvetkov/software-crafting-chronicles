@@ -1,9 +1,9 @@
 import { posts } from "#site/content";
-import MDXComponent from "@/app/components/mdx/MDXComponent";
 import "@/styles/mdx.css";
 import { notFound } from "next/navigation";
 import styles from "./PostPage.module.css";
 import ResetHeader from "./resetHeader";
+import MDXComponent from "@/app/components/mdx/MDXComponent";
 
 export async function generateStaticParams() {
   return posts.map((post) => ({

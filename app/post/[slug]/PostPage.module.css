@@ -1,7 +1,7 @@
 .postBody {
   overflow: auto;
   margin: 0 5rem 1rem 5rem;
-  transition: all var(--transition-duration) ease-in-out; /* Transition effect when sliding down (and up) */
+  /* transition: all var(--transition-duration) ease-in-out; Transition effect when sliding down (and up) */
 }
 @media only screen and (max-width: 1110px) {
   .postBody {
@@ -11,6 +11,9 @@
 @media only screen and (max-width: 900px) {
   .postBody {
     margin: 0;
+    margin: 1rem 1rem 1rem 1rem;
+
+    /* height: 100dvh; */
   }
 }
 
@@ -29,6 +32,6 @@
 
 /* Revert CSS style of target element and its children */
 /* .resetStyle,
-.resetStyle * {
-  all: revert !important;
-} */
+  .resetStyle * {
+    all: revert !important;
+  } */

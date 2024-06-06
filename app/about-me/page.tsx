@@ -9,7 +9,7 @@ function AboutMe() {
   return (
     <div id="post-body" className={`${styles.postBody} about-me-page`}>
       <ResetHeader></ResetHeader>
-      <div className={styles.n}>
+      <div>
         <MDXComponent code={aboutMePage!.code}></MDXComponent>
       </div>
     </div>

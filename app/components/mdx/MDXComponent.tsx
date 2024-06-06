@@ -7,19 +7,20 @@ const useMDXComponent = (code: string) => {
   return fn({ ...runtime }).default;
 };
 
-const components = {
+const comps = {
   Image,
   Link,
   IoLogoGithub,
 };
 
-interface MdxProps {
+interface MDXProps {
   code: string;
+  components?: Record<string, React.ComponentType>;
 }
 
-function MDXComponent({ code }: MdxProps) {
+export const MDXComponent = ({ code, components }: MDXProps) => {
   const Component = useMDXComponent(code);
-  return <Component components={components}></Component>;
-}
+  return <Component components={{ ...comps, ...components }} />;
+};
 
 export default MDXComponent;

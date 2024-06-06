@@ -19,12 +19,38 @@
 
 @media only screen and (max-width: 1110px) {
   .home {
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 12rem 5rem 2rem 5rem;
+  }
+  .author {
+    margin-left: 130px;
   }
 }
+@media only screen and (max-width: 1067px) {
+  .author {
+    margin-left: 100px;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  .home {
+    margin-right: 3rem;
+  }
+  .author {
+    margin-left: 80px;
+  }
+}
+
 @media only screen and (max-width: 900px) {
   .home {
-    margin: 0;
-    height: 100%;
+    /* margin: 12rem 3rem 2rem 3rem; */
+  }
+  .author {
+    margin-left: 170px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .home {
+    margin: 12rem 2rem 2rem 2rem;
   }
 }

@@ -5,14 +5,14 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import "./globals.css";
 import PostsWrapper from "./postsWrapper";
-import ScrollHandler from "./components/ScrollHandler";
+import ScrollToTop from "./components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Software crafting chronicles",
   description: "Tsvetan Tsvetkov's journal",
 };
 const inter = Montserrat({
-  weight: "100",
+  weight: "200",
   subsets: ["latin"],
 });
 
@@ -25,12 +25,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Cursor></Cursor>
-        <ScrollHandler></ScrollHandler>
+        {/* <ScrollHandler></ScrollHandler> */}
         <div className="wrapper-wrapper">
-          <div className="content-wrapper">
+          <div id="content-wrapper" className="content-wrapper">
             <div id="content" className="content">
               <Header></Header>
-
               {children}
             </div>
             <div id="second-column" className="second-column-wrapper">

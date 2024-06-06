@@ -24,8 +24,7 @@
 
 .postBody {
   overflow: auto;
-  margin: 0 5rem 1rem 5rem;
-  transition: all var(--transition-duration) ease-in-out; /* Transition effect when sliding down (and up) */
+  margin: 0 0.5rem 1rem 5rem;
 }
 @media only screen and (max-width: 1110px) {
   .postBody {
@@ -34,7 +33,7 @@
 }
 @media only screen and (max-width: 900px) {
   .postBody {
-    margin: 0;
+    margin: 0rem 1rem 0 1rem;
   }
 }
 
