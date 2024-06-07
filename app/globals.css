@@ -147,6 +147,11 @@ video {
     margin-top: 2rem !important;
   }
 }
+@media only screen and (max-width: 1100px) {
+  .aboutMeHeader {
+    margin-top: 0rem !important;
+  }
+}
 @media only screen and (max-width: 900px) {
   .aboutMeHeader {
     margin-top: 0 !important;
@@ -159,8 +164,9 @@ video {
     margin-top: 0 !important;
   }
   .aboutMeBio {
-    align-items: flex-start !important;
-    flex-direction: column !important;
+    width: 100% !important;
+    justify-content: space-between !important;
+    /* flex-direction: column !important; */
   }
   .aboutMeText {
     text-wrap: unset !important;
@@ -168,12 +174,24 @@ video {
     margin-bottom: 2rem;
   }
 }
+
 .helm-icon {
   background-color: whitesmoke !important;
 }
 .technologies p {
   margin: 0;
   margin-bottom: 0.2rem !important;
+}
+@media only screen and (max-width: 655px) {
+  .aboutMeBio {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+  .technologies p {
+    margin: 0;
+    margin-top: 0.8rem !important;
+    margin-bottom: 0.2rem !important;
+  }
 }
 .about-image {
   display: flex !important;
@@ -182,6 +200,7 @@ video {
 }
 .about-rectangle {
   margin-top: 1rem;
+  margin-bottom: 0.3rem;
   height: 12px;
   width: 164px;
   background-color: transparent;

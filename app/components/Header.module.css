@@ -23,6 +23,11 @@
   color: var(--secondary-text-color);
 }
 /* Mobile */
+@media only screen and (max-width: 1110px) {
+  .header {
+    padding: 6em 2 3rem 3rem !important;
+  }
+}
 @media only screen and (max-width: 900px) {
   .header {
     padding: 6em 3rem 3rem 3rem;
@@ -31,5 +36,12 @@
 @media only screen and (max-width: 450px) {
   .header {
     padding: 2rem 2rem 2rem 2rem;
+  }
+}
+/* Height */
+@media only screen and (max-height: 900px) {
+  .header {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
   }
 }
