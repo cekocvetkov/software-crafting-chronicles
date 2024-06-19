@@ -31,7 +31,6 @@ export default defineConfig({
           code: s.mdx(),
           title: s.string(), // Zod primitive type
           slug: s.slug("other"), // validate format, unique in posts collection
-          tag: s.string().optional(),
           // slug: s.path(), // auto generate slug from file path
           date: s.isodate(), // input Date-like string, output ISO Date string.
           cover: s.image().optional(),
@@ -49,7 +48,7 @@ export default defineConfig({
           code: s.mdx(),
           title: s.string(), // Zod primitive type
           slug: s.slug("post"), // validate format, unique in posts collection
-          tag: s.string().optional(),
+          tags: s.array(s.string()).optional(),
           // slug: s.path(), // auto generate slug from file path
           date: s.isodate(), // input Date-like string, output ISO Date string.
           cover: s.image().optional(),

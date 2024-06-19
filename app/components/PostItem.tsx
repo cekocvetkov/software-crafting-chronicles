@@ -9,6 +9,7 @@ interface PostItemProps {
   date: string;
   color: string; //HEX String
   active: boolean;
+  tags?: string[];
 }
 
 function PostItem({ slug, title, date, color, active }: PostItemProps) {

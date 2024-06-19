@@ -10,9 +10,22 @@ let previousColor = "";
 function Posts({ pathName }: { pathName: string }) {
   const searchParams = useSearchParams();
   const searchString = searchParams.get("search");
+  const tagsString = searchParams.get("tags");
+  const tags = tagsString?.split(",");
   let searchStringFiltered = posts;
   if (searchString) {
     searchStringFiltered = posts.filter((p) => p.title.toLowerCase().indexOf(searchString.toLocaleLowerCase()) >= 0);
+  }
+  if (tags && tags.length != 0 && tags[0] !== "") {
+    searchStringFiltered = searchStringFiltered.filter((p) => {
+      if (!p.tags) {
+        return false;
+      }
+      const postTags = new Set(p.tags);
+      const filterTags = new Set(tags);
+
+      return Array.from(filterTags).every((tag) => postTags.has(tag));
+    });
   }
   const sortedPosts = sortByDate(searchStringFiltered).filter((p) => pathName !== `/post/${p.slug}`);
   const highlighted = posts.filter((p) => pathName === `/post/${p.slug}`);
